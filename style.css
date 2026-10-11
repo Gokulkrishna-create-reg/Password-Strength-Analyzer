@@ -1,0 +1,218 @@
+
+/* Basic page settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #07111f, #14243b);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Main analyzer card */
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: #101d30;
+    padding: 35px;
+    border: 1px solid #263c56;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h1 {
+    color: #55d6be;
+    font-size: 28px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.container > p:first-of-type {
+    color: #a9b9cc;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Input label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #d7e2ef;
+}
+
+/* Password input and show button */
+.password-box {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #38516d;
+    border-radius: 8px;
+    background: #091423;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #55d6be;
+    box-shadow: 0 0 0 2px rgba(85, 214, 190, 0.15);
+}
+
+button {
+    padding: 12px 15px;
+    background: #55d6be;
+    color: #07111f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #83f0dc;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+/* Strength meter */
+.meter {
+    height: 8px;
+    background: #29394d;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#strengthBar {
+    width: 0%;
+    height: 100%;
+    background: #64748b;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Strength result */
+#strengthText {
+    margin-top: 14px;
+    color: #55d6be;
+    font-size: 17px;
+}
+
+/* Checklist */
+h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: #a9b9cc;
+    background: #17273b;
+    margin-bottom: 8px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+li::before {
+    content: "○ ";
+    margin-right: 5px;
+    color: #f2bc58;
+}
+
+li.valid {
+    color: #8cf0bd;
+}
+
+li.valid::before {
+    content: "✓ ";
+    color: #55d6be;
+}
+
+/* Feedback message */
+#feedback {
+    color: #c0cedd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* Generate button */
+#generateBtn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+}
+
+/* Safety note */
+.note {
+    color: #8295ab;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Mobile responsive design */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    button {
+        padding: 11px;
+    }
+}
+
+#breachBtn {
+    width: 100%;
+    margin-top: 12px;
+    background: #243b55;
+    color: #ffffff;
+    border: 1px solid #55d6be;
+}
+
+#breachBtn:hover {
+    background: #304e6e;
+}
+
+#breachResult {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
